@@ -1,0 +1,33 @@
+{
+  "payment_request_id": "PAY-2026-00481",
+  "correlation_id": "31ed5e48-df47-4e8f-8d8c-261916cd942a",
+  "request_status": "Approved",
+  "payee": {
+    "crm_account_id": "ACC-10492",
+    "legal_name": "Harbor Youth Services",
+    "erp_vendor_id": "VEND-3814",
+    "payability_status": "Payable"
+  },
+  "payment": {
+    "amount": 12500.0,
+    "currency": "USD",
+    "requested_payment_date": "2026-08-15",
+    "memo": "Community program installment 2 of 4"
+  },
+  "accounting": {
+    "subsidiary_code": "NSCF",
+    "department_code": "PROGRAMS",
+    "program_code": "YOUTH-ACCESS",
+    "expense_account": "6100"
+  },
+  "approval": {
+    "approved_by": "USR-2207",
+    "approved_at": "2026-08-10T18:42:12Z"
+  },
+  "documents": [
+    {
+      "document_id": "DOC-78145",
+      "document_type": "Approval Letter"
+    }
+  ]
+}
