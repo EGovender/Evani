@@ -6,7 +6,7 @@ This repository demonstrates how I approach complex integration problems—from 
 
 > **Note:** All organizations, systems, data, identifiers, and business scenarios in this repository are fictional or generalized. No proprietary employer code, confidential information, credentials, or production data are included.
 
-**Live demo:** [CRM → ERP Payment Simulator](https://egovender.github.io/Evani/) — an interactive, browser-only walkthrough of the CRM-to-ERP payment workflow described below.
+**Live demo:** [CRM → ERP Payment Simulator](https://egovender.github.io/Evani/) - an interactive, browser-only walkthrough of the CRM-to-ERP payment workflow described below.
 
 ---
 
