@@ -36,7 +36,7 @@ npm install
 npm run dev        # local dev server
 npm run build       # type-check + production build to dist/
 npm run lint         # oxlint
-npm run preview -- --base=/Evani/   # sanity-check the production build with the real Pages base path
+npm run preview -- --base=/enterprise-architecture/   # sanity-check the production build with the real Pages base path
 ```
 
 ## Deployment

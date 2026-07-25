@@ -16,7 +16,7 @@ Common commands (run from inside that subdirectory):
 - `npm run dev` — local dev server
 - `npm run build` — type-check (`tsc -b`) + production build to `dist/`
 - `npm run lint` — oxlint
-- `npm run preview -- --base=/Evani/` — sanity-check the production build with the real GitHub Pages base path
+- `npm run preview -- --base=/enterprise-architecture/` — sanity-check the production build with the real GitHub Pages base path
 
 Key structure: `src/types/domain.ts` (shared domain types) and `src/utils/toDocPayload.ts` (camelCase → the docs' snake_case wire shape) are the two files responsible for keeping the app's terminology, field shapes, and status vocabulary mirroring the Markdown docs — update both together if either the docs or the app's model changes. `src/engine/` holds the simulated integration pipeline (validators, failure-injection modes, retry/backoff), `src/state/` is a single Context + reducer store, and `src/data/seed.ts` holds the seeded demo dataset engineered to reproduce the product spec's example reconciliation numbers on first load.
 
