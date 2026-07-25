@@ -2,7 +2,7 @@
 
 A vendor-neutral reference architecture for designing secure, reliable, and maintainable integrations across enterprise applications, data platforms, financial systems, and external services.
 
-This repository demonstrates how I approach complex integration problems—from defining system boundaries and data ownership to designing synchronization, reconciliation, monitoring, security, and exception-handling patterns.
+This repository demonstrates how I approach complex integration problems-from defining system boundaries and data ownership to designing synchronization, reconciliation, monitoring, security, and exception-handling patterns.
 
 > **Note:** All organizations, systems, data, identifiers, and business scenarios in this repository are fictional or generalized. No proprietary employer code, confidential information, credentials, or production data are included.
 
