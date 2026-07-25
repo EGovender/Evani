@@ -4,9 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-This is a **documentation-only portfolio repository** — there is no application code, build system, linter, or test suite. It contains a single project, `enterprise-integration-reference-architecture/`, which is a vendor-neutral reference architecture (in Markdown + Mermaid diagrams) demonstrating how to design secure, reliable enterprise integrations between systems like CRMs, ERPs, payment platforms, and banks.
+This is primarily a **documentation portfolio repository**. It contains a single project, `enterprise-integration-reference-architecture/`, which is a vendor-neutral reference architecture (in Markdown + Mermaid diagrams) demonstrating how to design secure, reliable enterprise integrations between systems like CRMs, ERPs, payment platforms, and banks.
 
-Because there is nothing to build/lint/test, work here consists of writing and editing Markdown documentation, Mermaid diagrams, and small JSON sample payloads — not writing or running code.
+Most of the repo is still docs-only work — writing/editing Markdown, Mermaid diagrams, and small JSON sample payloads, not code. The one exception is the buildable app described below.
+
+## The CRM-ERP simulator app
+
+`enterprise-integration-reference-architecture/examples/crm-erp-simulator/` is a React + TypeScript + Vite app — the *only* buildable code in this repo, fully self-contained in that subdirectory (its own `package.json`, `tsconfig.json`, `vite.config.ts`). It's an interactive, browser-only simulation of the CRM-to-ERP payment workflow documented in `docs/workflows/crm-to-erp-payment-request.md`, deployed to GitHub Pages via `.github/workflows/deploy-crm-erp-simulator.yml` on every push to `main` that touches that subdirectory.
+
+Common commands (run from inside that subdirectory):
+- `npm run dev` — local dev server
+- `npm run build` — type-check (`tsc -b`) + production build to `dist/`
+- `npm run lint` — oxlint
+- `npm run preview -- --base=/Evani/` — sanity-check the production build with the real GitHub Pages base path
+
+Key structure: `src/types/domain.ts` (shared domain types) and `src/utils/toDocPayload.ts` (camelCase → the docs' snake_case wire shape) are the two files responsible for keeping the app's terminology, field shapes, and status vocabulary mirroring the Markdown docs — update both together if either the docs or the app's model changes. `src/engine/` holds the simulated integration pipeline (validators, failure-injection modes, retry/backoff), `src/state/` is a single Context + reducer store, and `src/data/seed.ts` holds the seeded demo dataset engineered to reproduce the product spec's example reconciliation numbers on first load.
+
+Everything else in the repo (root `README.md`, `docs/`, `sample-data/`, `.gitignore`) remains documentation-only — no build/lint/test applies outside the simulator's own subdirectory.
 
 ## Content conventions (must follow when editing or adding docs)
 

@@ -6,6 +6,8 @@ This repository demonstrates how I approach complex integration problems—from 
 
 > **Note:** All organizations, systems, data, identifiers, and business scenarios in this repository are fictional or generalized. No proprietary employer code, confidential information, credentials, or production data are included.
 
+**Live demo:** [CRM → ERP Payment Simulator](https://egovender.github.io/Evani/) — an interactive, browser-only walkthrough of the CRM-to-ERP payment workflow described below.
+
 ---
 
 ## Overview
@@ -455,7 +457,7 @@ enterprise-integration-reference-architecture/
 
 Future examples in this repository may include:
 
-- CRM-to-ERP transaction creation
+- ~~CRM-to-ERP transaction creation~~ — delivered as the [live demo](https://egovender.github.io/Evani/)
 - Master-data synchronization
 - Mock payment-platform integration
 - Duplicate-prevention logic
@@ -565,6 +567,7 @@ The objective is to create solutions that are not only technically functional, b
 
 - [Enterprise Payment Integration System Context](docs/architecture/system-context.md)
 - [CRM-to-ERP Payment Request Workflow](docs/workflows/crm-to-erp-payment-request.md)
+- [Live Demo: CRM → ERP Payment Simulator](https://egovender.github.io/Evani/) — interact with the workflow above directly in your browser
 
 These examples use a fictional organization and synthetic data to demonstrate system boundaries, data ownership, validation, idempotency, retries, auditability, exception handling, and reconciliation.
 
